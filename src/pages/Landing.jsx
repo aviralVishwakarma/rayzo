@@ -5,7 +5,6 @@ import { ROUTES, COLORS } from '../utils/constants'
 import { fadeInUp, stagger, float3D, button3D, card3D } from '../animations/motionVariants'
 import Footer from "../components/Footer"
 import NavbarProButton from '../components/NavbarProButton'
-import lungs from "../images/lungs.png";
 
 export default function Landing() {
   return (
@@ -80,7 +79,8 @@ export default function Landing() {
 
               {/* Bigger Lung Image */}
              <img
-  src={lungs}
+  src="/lungs.png"
+
   alt="Rayzo lung X-ray analysis"
   className="w-full max-w-xs sm:max-w-sm opacity-95"
 />
