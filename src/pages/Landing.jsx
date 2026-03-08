@@ -80,7 +80,7 @@ export default function Landing() {
 
               {/* Bigger Lung Image */}
               <img
-                src={lungs}
+                src="/images/lungs.png"
                 alt="Rayzo lung X-ray analysis"
                 className="w-full max-w-xs sm:max-w-sm opacity-95"
               />
