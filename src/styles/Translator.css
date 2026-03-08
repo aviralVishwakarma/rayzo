@@ -1,0 +1,168 @@
+.translator-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4f8 50%, #dbeafe 100%);
+  padding: 2rem 1rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.translator-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.12), 0 1.5px 6px rgba(0, 0, 0, 0.06);
+  max-width: 560px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Header ────────────────────────────────────── */
+.translator-header {
+  text-align: center;
+}
+
+.translator-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.translator-header p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Textarea ──────────────────────────────────── */
+.translator-textarea {
+  width: 100%;
+  min-height: 130px;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #0f172a;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.translator-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background: #ffffff;
+}
+
+.translator-textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* ── Select Dropdown ───────────────────────────── */
+.translator-select-wrapper {
+  position: relative;
+}
+
+.translator-select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #0f172a;
+  background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") no-repeat right 1rem center;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.translator-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background-color: #ffffff;
+}
+
+/* ── Result ────────────────────────────────────── */
+.translator-result {
+  background: linear-gradient(135deg, #eff6ff, #e0e7ff);
+  border: 1px solid #bfdbfe;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+  min-height: 60px;
+}
+
+.translator-result-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #3b82f6;
+  margin: 0 0 0.5rem;
+}
+
+.translator-result-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1e293b;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── Loading & Error ───────────────────────────── */
+.translator-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  font-size: 0.95rem;
+}
+
+.translator-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid #bfdbfe;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: translator-spin 0.7s linear infinite;
+}
+
+@keyframes translator-spin {
+  to { transform: rotate(360deg); }
+}
+
+.translator-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 600px) {
+  .translator-card {
+    padding: 1.5rem 1.1rem;
+    gap: 1.1rem;
+  }
+
+  .translator-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .translator-textarea {
+    min-height: 100px;
+  }
+}
