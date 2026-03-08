@@ -79,11 +79,11 @@ export default function Landing() {
             <div className="relative w-full max-w-md sm:max-w-lg h-[420px] sm:h-[480px] rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl flex items-center justify-center">
 
               {/* Bigger Lung Image */}
-              <img
-                src="/images/lungs.png"
-                alt="Rayzo lung X-ray analysis"
-                className="w-full max-w-xs sm:max-w-sm opacity-95"
-              />
+             <img
+  src={lungs}
+  alt="Rayzo lung X-ray analysis"
+  className="w-full max-w-xs sm:max-w-sm opacity-95"
+/>
 
               {/* Disease Indicators */}
               <div className="absolute top-8 left-8 bg-white shadow-lg px-5 py-3 rounded-xl text-sm">
